@@ -1,6 +1,9 @@
 # carmina
 CSE 583 Final Project
 
+**Project Members:**
+- Suh Young Choi
+
 **Why carmina?**
 > *Carmina* is the Latin word for songs or poems. It's a working title, and I don't mind changing it further down the line.
 
