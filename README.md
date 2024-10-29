@@ -3,6 +3,7 @@ CSE 583 Final Project
 
 **Project Members:**
 - Suh Young Choi
+- Elizabeth Nova
 - Simon Dovan Nguyen
 
 **Why carmina?**
