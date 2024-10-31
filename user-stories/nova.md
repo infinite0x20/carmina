@@ -11,7 +11,9 @@ He's an older researcher (boomer status). He has little experience using softwar
 Implied use cases: think about any implied cases: 
 The tool is not very interactive. The user inputs their file/latin piece and the tool displays: metrical analysis. So as long as the user provides the file, that should be it. 
 ## Validation/authentication: 
-Make sure it’s latin 
+Make sure it’s latin: 
+- How do we verify that it is in latin? 
+- How do we verify if it’s latin poetry? Are the symbols the only way to verify this?  
 Limit file sizes and type of file: html or txt. Or html. 
 It has to be poetry: (1) new line characters. Common files used for latin poetry: xml or txt. 
 ## What does the output look like? 
