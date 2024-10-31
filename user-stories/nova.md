@@ -6,4 +6,4 @@ He has a file of a latin piece and wants to do metrical analysis.
 ## What needs and desires do they want for the tool?
 Ideally wants the tool to tell him a summary or illustration of the results from doing a metrical analysis. 
 ## What is thier skill level? 
-He only uses excel and word-docs in the past, so he is not experienced using a tool like this before.  
+He's an older researcher (boomer status). He has little experience using software programs, but he is willing to learn basics as long as it's simple enough for him to get the stuff done.  
