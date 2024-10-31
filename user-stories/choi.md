@@ -7,3 +7,7 @@ Virgil is an undergrad Latin major working on his poetry composition homework. H
 ## Grad student
 
 Cicero is working on his PhD. He wants to use the `carmina` package to track instances of the same phrase in the speeches he's analyzing. He's also interested in figuring out how often the speeches use hypotactic versus paratactic sentence structure. He's taken a few programming classes and understands how procedural programming works in Python.
+
+## Authentication
+
+Users input the text they want to work with. They use functions on the text to produce the output, which is just the desired analytics. There are almost no interactive components.
