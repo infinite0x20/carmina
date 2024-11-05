@@ -14,3 +14,6 @@ Cicero is working on his PhD. He wants to use the `carmina` package to track ins
 ## Authentication
 
 Users input the text they want to work with. They use functions on the text to produce the output, which is just the desired analytics. There are almost no interactive components.
+
+## Data Validation
+Files need to be XML or .txt and they'll need to be in Latin (assuming dactylic hexameter, but this will be verified through the scansion)
