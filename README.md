@@ -22,15 +22,22 @@ CSE 583 Final Project
 - Focus on File I/O and function calling
 - Have as few dependencies as possible outside of base Python
 
-## Tasks
-
-Specific tasks will be given their own issues and assignees. Here is a high-level summary for what we want to achieve.
+## Immediate Tasks
+Specific tasks will be given their own issues and assignees. Here is a high-level summary for what we want to achieve. Immediate tasks are things that we might be able to do more easily, or things that later tasks will build on.
 
 ### File Read-in
 We need to be able to parse XML files into some useable format, probably a string. We can use XMLs from Perseus as a guide.
 
 ### Scansion - Dactylic Hexameter
 One of the hallmarks of poetic analysis is being able to scan lines of poetry, or determine their meter. This function, when given an input, should be able to parse a line and return the scansion of that line.
+
+## Intermediate Tasks
+
+### Text Matching
+Finding same instances of the same character string in the text. This may be a stepping-stone for more advanced text matching that accounts for inflected forms.
+
+### Meter Matching
+Builds off the first scansion function to return lines that have the same metrical scheme.
 
 ## Stretch Goals
 
