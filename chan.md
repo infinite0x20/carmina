@@ -1,5 +1,0 @@
-Tom is a Classics researcher with a strong foundation in Latin language and literature. He focuses on analyzing Latin poetry, particular the rhythm 
-and meter used by classical poets. Tom wants to use `carmina` to conduct a 
-detailed metrical analysis of Latin poetry. Tom needs `carmina` to identify
-the rythm of the poetry and he wants an interactive visual feature to hel see how syllables and feet align within each line of verse. Tom is highly skilled in Latin and familiar with classical metrical forms but seeks an accessible tool that offers in-depth analysis without extensive technical
- input 
