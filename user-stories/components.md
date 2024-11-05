@@ -8,7 +8,7 @@
 **Side effects?**  
 
 ## Data Validation Logic
-**What it does:**  
+**What it does:** Verfies the text is in latin, in a txt or xml.file, and reads as poetry.    
 **Inputs:**  
 **Outputs:**  
 **Components:**  
