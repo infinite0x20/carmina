@@ -1,20 +1,31 @@
-# User story
-## Who is the user? 
-The user, richard, is a classicist who studies latin. 
-## What do they want to do with the tool? 
-He has a file of a latin piece and wants to do metrical analysis.  
-## What needs and desires do they want for the tool?
-Ideally wants the tool to tell him a summary or illustration of the results from doing a metrical analysis. 
-## What is thier skill level? 
-He's an older researcher (boomer status). He has little experience using software programs, but he is willing to learn basics as long as it's simple enough for him to get the stuff done.  
-# Describing a Use Case 
-Implied use cases: think about any implied cases: 
-The tool is not very interactive. The user inputs their file/latin piece and the tool displays: metrical analysis. So as long as the user provides the file, that should be it. 
-## Validation/authentication: 
-Make sure it’s latin: 
-- How do we verify that it is in latin? 
-- How do we verify if it’s latin poetry? Are the symbols the only way to verify this?  
-Limit file sizes and type of file: html or txt. Or html. 
-It has to be poetry: (1) new line characters. Common files used for latin poetry: xml or txt. 
-## What does the output look like? 
-Our output: it’s text with symbols (so dash and ‘u’ ‘-‘). Perhaps a way to let the user download it as an image or pdf? 
+# User Stories 
+
+## Story #1 
+**User:** Dr.Julia is a univerisity professor specializing in Latin literature.  
+**Goal:**  Dr. Julia wants to analyze the meter of verses in the Aeneid to teach students about the usage of dactylic hexameter. 
+**Needs and Desires:** Dr. Julia needs a reliable and precise tool for metrical analysis that can automatically identify and parse dactylic patterns. She values accuracy, and the ability to generate detailed, exportable reports for classroom examples. 
+**Skill Level:** She's an expert in Latin poetry with intermediate programming skills, familiar with Python but not advanced with NLP libraries.   
+
+ ## Story #2 
+**User:** Sonia is a graduate student in Classics.   
+**Goal:** Sonia wants to use Carmina to analyze the meter in several latin poetry pieces specifically looking at deviations from traditional dactylic hexameter.  
+**Needs and Desires:** Sonia wants a flexible tool that can identify metrical variations and provide simple visualizations for research presentations. She values a user-friendly interface and documentation that explains the function of a parameter.  
+**Skill Level:** She is proficient in Latin, beginner in programming, with limited experience in NLP and Python packages.  
+
+## Story #3 
+**User:** Maria is a high school Latin teacher.   
+**Goal:** Maria wants Carmina to help her demonstrate metrical patterns of poetry of Ovid to her students as part of an introductory Latin poetry course.  
+**Needs and Desires:** She wants a straightforward tool that provides clear outputs such as labeling each foot in a line of poetry. She values simplicity over complexity, preferring a few well-documented functions over extensive customization.   
+**Skill Level:** Maria is proficient in Latin, minimal programming experience; requires a tool that works with simple commands and minimal setup.   
+
+## Story #4 
+**User:** Dr. Roberto is a digital humanities researcher focused on Latin poetry.   
+**Goal:**  Dr. Roberto wants to conduct metrical analysis on Latin poetry collections to identify broader trends in meter across authors.
+**Needs and Desires:** He needs a tool that allows for batch processing of texts, with customizable parameters for different poetic meters. Dr. Roberto values customization and the ability to integrate Carmina’s outputs with other data analysis tools. 
+**Skill Level:** Advanced user with strong programming skills, familiar with Python and NLP concepts. 
+
+## Story #5 
+**User:** Sarah is an undergraduate majoring in Classics and minoring in Data Science. 
+**Goal:** Sarah wants to analyze metrical patterns in selected poems for her final project, aiming to understand the influence of meter on thematic elements in Latin literature. 
+**Needs and Desires:** She needs a tool that offers guided usage with example datasets and has an intuitive API that makes it easy to analyze smaller sections of text. She values accessible documentation and error messages that provide clear troubleshooting information. 
+**Skill Level:** Intermediate Latin knowledge, beginner Python skills, familiar with basic functional programming but not object-oriented programming.
