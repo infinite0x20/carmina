@@ -8,12 +8,23 @@ Virgil is an undergrad Latin major working on his poetry composition homework. H
 
 Cicero is working on his PhD. He wants to use the `carmina` package to track instances of the same phrase in the speeches he's analyzing. He's also interested in figuring out how often the speeches use hypotactic versus paratactic sentence structure. He's taken a few programming classes and understands how procedural programming works in Python.
 
+## DH Scholar
+
+Vitruvius is interested in looking at alliteration across dactylic hexameter. He doesn't know much Latin, but he does know how to use Python for text analysis. He's done alliteration studies in other natural languages.
+
+## DH Scholar 2
+
+Hypatia is working with Vitruvius's lab, but she's more interested in looking at alliterative figures within the same line. She's better versed in Latin and Python.
+
+## New Latin Student
+
+Julius is new to Latin epic, but he doesn't know a lot about scansion. However, his Latin class has a scansion assignment due tomorrow, and he doesn't know how to do it! On the other hand, he does know some Python, and he's familiar enough with Latin to know how to read it. He'll try to use the hexameter scansion function from `carmina` to finish his homework.
+
 
 # Use Cases
 
-## Authentication
-
-Users input the text they want to work with. They use functions on the text to produce the output, which is just the desired analytics. There are almost no interactive components.
-
-## Data Validation
-Files need to be XML or .txt and they'll need to be in Latin (assuming dactylic hexameter, but this will be verified through the scansion)
+- **Virgil:** Using the hexameter scanning tool to verify that his own poetry is in the correct meter
+- **Cicero:** Using the text reuse finder to search a piece of poetry for recurring text
+- **Vitruvius:** Using the alliteration finder across lines of poetry, probably at the beginnings of words
+- **Hypatia:** Using the alliteration finder within one line, probably at the beginnings of syllables
+- **Julius:** Using the hexameter scanning tool to scan unfamiliar lines of poetry.
