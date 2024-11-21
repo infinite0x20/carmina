@@ -8,7 +8,8 @@ This module contains the function(s) for metrical analysis
 VOWELS = "aeiouy"
 CONSONANTS = "bcdfghjklmnpqrstvx"
 
-Arm av ir umqu e ca no
+# Arm av ir umqu e ca no
+# Did that work
 
 # Global variables for diphthongs here
 DIPHTHONGS = ["ae", "ai", "oi"]
