@@ -1,0 +1,22 @@
+[project]
+name = "carmina"
+dynamic = ["version"]
+authors = [
+  {name="Suh Young Choi", email="atobdura@uw.edu"},
+  {name="Elizabeth Nova", email="emend026@uw.edu"},
+  {name="Hui-Hsuan Chan", email="hhchan1@uw.edu"},
+  {name="Simon Dovan Nguyen", email="simondn@uw.edu"}
+]
+description = "A Python package for analyzing Latin poetry"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+	
+] 
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[tool.setuptools_scm]
