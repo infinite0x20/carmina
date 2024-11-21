@@ -2,6 +2,8 @@
 This module contains the function(s) for metrical analysis
 """
 
+# hi this is an example 
+
 # imports?
 
 # Vowels - FIGURE THIS OUT ABOUT THE LETTER I
