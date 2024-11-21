@@ -13,7 +13,9 @@ def parse_txt(file_path):
     # TODO: @Suh Young
     # normalize everything anyway
     with open(file_path) as f:
-        return f.readlines()
+        lines = f.readlines()
+        # normalized_lines = [normalize_line(line) for line in lines]
+        return lines
 
 def parse_xml(file_path):
     """
