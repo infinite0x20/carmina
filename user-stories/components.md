@@ -15,11 +15,14 @@
 **Side effects?** Not sure. 
 
 ## File Parser
-**What it does:**  
-**Inputs:**  
-**Outputs:**  
-**Components:**  
-**Side effects?**  
+**What it does:** Converts the input .txt or .xml file into a structured, machine-readable format for further analysis. Ensures the file is properly segmented into lines of text, identifies headers or metadata, and formats content for compatibility with the scansion function.
+**Inputs:** A .txt or .xml file containing Latin text (validated by the Data Validation Logic).
+**Outputs:** A structured file or object containing parsed lines of text (e.g., a list or data frame where each line is an element).
+**Components:**
+**File Reader:** Reads the raw input file.
+Line Segmenter: Breaks the content into lines, ignoring empty lines or non-poetic metadata.
+Metadata Extractor: Optionally identifies and stores non-poetic metadata (e.g., author, title).
+Side effects? If the input file has formatting issues, parsing errors may occur, requiring fallback mechanisms or error messages for the user.
 
 ## Scansion Function
 **What it does:**  Given a file of dactylic hexameter, returns the scansion and feet of each line  
