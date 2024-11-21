@@ -11,6 +11,7 @@ def parse_txt(file_path):
     analysis on
     """
     # TODO: @Suh Young
+    # Adding a fun comment for funsies
     # normalize everything anyway
     with open(file_path) as f:
         lines = f.readlines()
