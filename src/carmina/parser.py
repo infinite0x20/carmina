@@ -40,9 +40,11 @@ def _normalize_line(line):
     Takes in a line and removes the <l>, </l>, and \n characters
 
     Question: Do we want to lowercase + remove punctuation?
+    Answer: YES
 
     For now: implement removal of tags and \n characters. Don't worry
     about lowercasing or removing punctuation
     """
     # TODO: @Liz
+    # re.sub(r'[^\w\s]', '', word.lower()) # if we want to lowercase + remove punct
     pass

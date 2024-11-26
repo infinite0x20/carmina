@@ -54,8 +54,8 @@ def hexameter_line(line):
 
     End goal is:
     "-  u u  - u   u -   -   -  -   -  u   u  - - "
-    "Arma virumque cano, Troiae qui primus ab oris"
-    "arma virumque cano troiae qui primus ab oris" <-- or we could do this?
+    "Arma virumque cano, Troiae qui primus ab oris" <-- not this (for now)
+    "arma virumque cano troiae qui primus ab oris" <-- We are doing this
     [0, 3, 5, 8, 11, 13] <-- assuming these are the syllable indices,
                              assign the -uu-- characters at each next
                              index
