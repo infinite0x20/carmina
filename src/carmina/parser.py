@@ -6,9 +6,14 @@ This is the module where we'll write the file parser
 
 def parse_txt(file_path):
     """
-    This function takes in a .txt file and returns a... object?
-    Usable string and/or data structure that we can do the later
-    analysis on
+    This function takes in a .txt file and returns list of strings
+    that can be used later in the scansion functions.
+
+    Inputs:
+        file_path: str
+
+    Outputs:
+        lines: list[str]
     """
     # TODO: @Suh Young
     # Adding a fun comment for funsies
