@@ -1,8 +1,9 @@
 """
-This is the module where we'll write the file parser
+The module for reading in .txt and .xml files and normalizing
+their text.
 """
 
-# necessary imports?
+import re
 
 def parse_txt(file_path):
     """
@@ -13,31 +14,29 @@ def parse_txt(file_path):
         file_path: str
 
     Outputs:
-        lines: list[str]
+        normalized_lines: list[str]
     """
-    # TODO: @Suh Young
-    # Adding a fun comment for funsies
-    # normalize everything anyway
     with open(file_path) as f:
         lines = f.readlines()
-        # normalized_lines = [normalize_line(line) for line in lines]
-        return lines
+        normalized_lines = [_normalize_line(line) for line in lines]
+        return normalized_lines
 
 def parse_xml(file_path):
     """
-    Same thing as parse_txt, but it takes in an .xml and returns
-    the data in the same format as the result of parse_txt
-    """
-    # TODO: @Suh Young
-    
-#     with open(file_path) as f:
-#       lines = f.readlines()
-#       actual_lines = [line for line in lines if line.startswith("<l>")]
-#       print(actual_lines)
-#       more cleanup here
-        # remove <l> and </l> tags, remove \n
+    This function takes in a .txt file and returns list of strings
+    that can be used later in the scansion functions.
 
-    pass
+    Inputs:
+        file_path: str
+
+    Outputs:
+        normalized_lines: list[str]
+    """
+    with open(file_path) as f:
+        lines = f.readlines()
+        normalized_lines = [_normalize_line(line) for line in lines if line.startswith("<l>")]
+        return normalized_lines
+
 
 def _normalize_line(line):
     """
