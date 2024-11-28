@@ -34,7 +34,7 @@ def parse_xml(file_path):
 
     pass
 
-import string 
+import re 
 
 def _normalize_line(line):
     """
@@ -48,7 +48,7 @@ def _normalize_line(line):
 
     line = line.replace("<l>", "").replace("</l>", "").replace("\n", "")
     line = line.lower() #converts to lowercase 
-    line = line.translate(str.maketrans("", "", string.punctuation)) #removes punctuation
+    line = re.sub(r'[^\w\s]', '', line) #removes punctuation
 
     # TODO: @Liz
     return line 
