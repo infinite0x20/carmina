@@ -38,17 +38,31 @@ def parse_xml(file_path):
         return normalized_lines
 
 
+import re 
+
 def _normalize_line(line):
     """
     Helper function for parse_text and parse_xml
     Takes in a line and removes the <l>, </l>, and \n characters
 
+
+    
     Question: Do we want to lowercase + remove punctuation?
     Answer: YES
 
-    For now: implement removal of tags and \n characters. Don't worry
-    about lowercasing or removing punctuation
+    For now: implement removal of tags and \n characters. 
     """
+
+    line = line.replace("<l>", "").replace("</l>", "").replace("\n", "")
+    line = line.lower() #converts to lowercase 
+    line = re.sub(r'[^\w\s]', '', line) #removes punctuation
+
     # TODO: @Liz
-    # re.sub(r'[^\w\s]', '', word.lower()) # if we want to lowercase + remove punct
-    pass
+
+    return line 
+
+line = "vi superum saevae memorem Iunonis ob iram;"
+normalized_line = _normalize_line(line)
+print(normalized_line)
+
+
