@@ -18,6 +18,15 @@ expected_single_vowel_elision = ["turbine corripuit scopuloque infixit acuto"]
 
 
 def test_parse_txt():
+    """
+    Tests the parse_txt() function from parser
+
+    Inputs:
+        none
+
+    Outputs:
+        none
+    """
     # mixed_elision
     path_file = "CARMINA/examples/aeneid_mixed_elision.xml"
     result = parse_txt(path_file)
@@ -45,6 +54,15 @@ def test_parse_txt():
 
 
 def test_parse_xml():
+    """
+    Tests the parse_xml() function from parser
+
+    Inputs:
+        none
+
+    Outputs:
+        none
+    """
     # mixed_elision
     path_file = "CARMINA/examples/aeneid_mixed_elision.xml"
     result = parse_xml(path_file)
