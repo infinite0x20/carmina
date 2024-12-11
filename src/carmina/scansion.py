@@ -4,86 +4,102 @@ This module contains the function(s) for metrical analysis
 
 # TODO @Suh Young - imports and globals
 
-# imports?
 
-VOWELS = "aeiouy"
-CONSONANTS = "bcdfghjklmnpqrstvx"
-DIPHTHONGS = ["ae", "ai", "oi"]
+import re
+def is_diphthong(pair):
+    """Check if a pair of characters is a diphthong."""
+    diphthongs = {"ae", "au", "oe", "ei", "eu", "ui", "oi", "ou"}
+    return pair in diphthongs
 
-def _is_vowel(letter):
-    """Check if a letter is a vowel."""
-    return letter in VOWELS
+    """Check if a pair of characters is a diphthong."""
+    diphthongs = {"ae", "au", "ei", "eu", "oe", "ui"}
+    return pair in diphthongs
 
-def _is_consonant(letter):
-    """Check if a letter is a consonant."""
-    return letter in CONSONANTS
+def syllabify_latin(text):
+    """Syllabify a line of Latin text."""
+    # Normalize text (remove non-letters and convert to lowercase)
+    text = re.sub(r'[^a-zA-Z]', '', text.lower())
 
-def _syllabify_backward(line):
-    """
-    Breaks a single line down into syllables by checking the line backward,
-    but returns the syllables in the original order.
-    
-    Parameters:
-        line (str): A line of text to syllabify.
-    
-    Returns:
-        list: A list of syllables from the input line in the original order.
-    """
-    # Remove spaces and make lowercase
-    line = line.replace(" ", "").lower()
-    
     syllables = []
-    current = ""
-    
-    # Traverse the line backward
-    i = len(line) - 1
-    while i >= 0:
-        char = line[i]
-        
-        if _is_vowel(char):  # If the character is a vowel
-            # Check if the next two characters are consonants
-            if i - 2 >= 0 and _is_consonant(line[i - 1]) and _is_consonant(line[i - 2]):
-                current = char  # Put the vowel into current buffer to wait for the next vowel
-            else:
-                # If no two consonants follow, process the vowel normally
-                if current:  # If there are accumulated consonants, add them to the syllable
-                    current = char + current  # Add the vowel to the current consonant buffer
-                    syllables.insert(0, current)  # Insert the consonant-vowel pair to syllables
-                    current = ""  # Reset the consonant buffer
+    i = 0
+
+    while i < len(text):
+        # Handle diphthongs
+        if i < len(text) - 1 and is_diphthong(text[i:i+2]):
+            syllables.append(text[i:i+2])
+            i += 2
+        # Handle vowels (and mark syllable boundaries)
+        elif text[i] in "aeiouy":
+            syllables.append(text[i])
+            i += 1
+        # Handle consonants
+        else:
+            start = i
+            while i < len(text) and text[i] not in "aeiouy":
+                i += 1
+            consonant_cluster = text[start:i]
+            # Distribute consonants based on rules
+            if i < len(text):
+                if len(consonant_cluster) > 1 and consonant_cluster[:2] in {"pr", "tr", "pl", "cl", "fl", "bl", "gl", "cr", "br", "dr", "qu"}:
+                    syllables[-1] += consonant_cluster[0]
+                    syllables.append(consonant_cluster[1:])
                 else:
-                    syllables.insert(0, char)  # Just add the vowel itself
-        
-        elif _is_consonant(char):  # If the character is a consonant
-            current = char + current  # Accumulate the consonant
-        
-        i -= 1  # Move to the previous character
+                    split_index = -1 if len(consonant_cluster) > 1 else 0
+                    syllables[-1] += consonant_cluster[:split_index]
+                    syllables.append(consonant_cluster[split_index:])
+            else:
+                syllables[-1] += consonant_cluster
+
+    # Ensure proper merging of syllables (avoid over-splitting)
+    final_syllables = []
+    for j, syl in enumerate(syllables):
+        if j > 0 and syl in "aeiouy" and final_syllables[-1][-1] not in "aeiouy":
+            final_syllables[-1] += syl
+        else:
+            final_syllables.append(syl)
+
+    return "-".join(final_syllables)
+
+# Example usage
+line = "Arma virumque cano Troiae qui primus ab oris"
+syllabified = syllabify_latin(line)
+print(syllabified)
 
 
-    # Add any remaining consonants as the final syllable
-    if current:
-        syllables.insert(0, current)
 
-    # Return syllables in the original order
-    return syllables
+def is_long(syllable):
+    """Determine if a syllable is long."""
+    vowels = "aeiouy"
+    consonants = "bcdfghjklmnpqrstvwxyz"
 
-# Example usage:
-line = "Arma virumque cano" 
-syllables = _syllabify_backward(line)
-print(syllables)  # Expected Output: ['arm', 'av', 'ir', 'umqu', 'ec', 'an', 'o'] 
+    # Check if it contains a diphthong (long by nature)
+    if len(syllable) > 1 and is_diphthong(syllable[:2]):
+        return True
 
-# check if start from the back
-# check how to deal with the diphthongs
-# check how to deal with the last two syllables 
+    # Check if it ends with a long vowel
+    if syllable[-1] in vowels and len(syllable) == 1:
+        return False  # Assume short unless we know the vowel is long
 
-def _is_long(item):
-    """
-    Determines whether a single item in the list has a length greater than or equal to 3.
-    Returns True if the item's length >= 3, else False.
-    """
-    return len(str(item)) >= 3  # Convert item to string and check length
+    # Check for long by position (vowel followed by multiple consonants)
+    for i in range(len(syllable)):
+        if syllable[i] in vowels:
+            remainder = syllable[i + 1:]
+            if len(remainder) > 1 and all(c in consonants for c in remainder):
+                return True
 
-# Example usage:
-print([_is_long(syllable) for syllable in syllables])  # Output: [True, False, False, True, False, False, False]
+    return False
+
+# Example usage
+syllables = syllabified.split("-")
+long_status = [(syl, is_long(syl)) for syl in syllables]
+print("Syllable lengths:", long_status)
+
+
+
+
+
+
+
 
 
 def hexameter_line(line):
