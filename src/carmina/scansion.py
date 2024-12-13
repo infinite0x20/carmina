@@ -2,7 +2,7 @@
 This module contains the function(s) for metrical analysis
 """
 
-# hi this is an example 
+# TODO @Suh Young - imports and globals
 
 # imports?
 
@@ -23,6 +23,7 @@ def _syllabify(line):
 
     Arma virumque cano -> armavirumquecano -> arm av ir umqu ec an o
     """
+    # TODO @Hui-Hsuan
     pass
 
 def _is_long(syllable):
@@ -33,6 +34,7 @@ def _is_long(syllable):
     Initial ideas: Takes in a single syllable like "arm" or "av".
     If there are multiple back-to-back consonants, return True.
     """
+    # TODO @Hui-Hsuan
     pass
 
 def hexameter_line(line):
@@ -60,10 +62,12 @@ def hexameter_line(line):
                              assign the -uu-- characters at each next
                              index
     """
+    # TODO @Suh Young
     pass
 
 def hexameter_text(lines):
     """
     Multi-line hexameter parsing
     """
+    # TODO @Suh Young
     pass
