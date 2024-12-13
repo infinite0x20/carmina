@@ -17,20 +17,15 @@ With Carmina, users can:
 
 Carmina emphasizes ease of use and accesibility by relying on dependencies that are simple to install and use, designed for those with little programming experience.   
 
-## How to Install Carmina 
-- Step 1:
-- Step 2:
-- Step 3:
-
 ## Find a Bug? 
 If you found an issue or would like to submit an improvement to this project, please create an issue using the issues tab above. 
 
 ## Team Contributions 
 Our team collaborated to bring Carmina to life. Below are the tasks each member was responsible for: 
 
-- **Suh Young Choi:** [Task details]
-- **Hui-Hsuan Chan:** [Task details]
-- **Elizabeth Nova:** [Task details]
-- **Simon Nguyen:** [Task details] 
+- **Suh Young Choi:** Set up Carmina repo, wrote case stories & case studies, wrote python functions under parser.py (parse.txt & file_path function), wrote tests, code review. 
+- **Hui-Hsuan Chan:** Wrote case stories & case studies, wrote python functions & test for scanscion, code review.
+- **Elizabeth Nova:** Wrote case stories & case studies, wrote python function under parser.py (normalize_line function), code review, wrote documentation, & prepared final presentation slides.
+- **Simon Nguyen:** Wrote case stories & case studies, wrote test for scanscion, code review.  
 
 
