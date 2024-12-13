@@ -139,15 +139,6 @@ def is_long(syllable):
     return False
 
 
-# Example usage:
-line = "Arma virumque cano Troiae qui primus ab oris"
-syllabified = syllabify_line(line)
-print("Syllabified line:", syllabified)
-
-long_status = [(syl, is_long(syl)) for syl in syllabified]
-print("Syllable lengths:", long_status)
-
-
 def hexameter_line(line):
     """
     Single-line hexameter parsing
