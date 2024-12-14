@@ -24,7 +24,7 @@ If you found an issue or would like to submit an improvement to this project, pl
 Our team collaborated to bring Carmina to life. Below are the tasks each member was responsible for: 
 
 - **Suh Young Choi:** Set up Carmina repo, wrote case stories & case studies, wrote python functions under parser.py (parse.txt & file_path function), wrote tests, code review. 
-- **Hui-Hsuan Chan:** Wrote case stories & case studies, wrote python functions & test for scanscion, code review.
+- **Hui-Hsuan Chan:** Wrote case stories & case studies, wrote python functions for scansion & test function for parser.py, code review.
 - **Elizabeth Nova:** Wrote case stories & case studies, wrote python function under parser.py (normalize_line function), code review, wrote documentation, & prepared final presentation slides.
 - **Simon Nguyen:** Wrote case stories & case studies, wrote test for scanscion, code review.  
 
