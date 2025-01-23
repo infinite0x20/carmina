@@ -1,3 +1,6 @@
 name: carmina
+channels:
+  - conda-forge
 dependencies:
-  # removed re 
+  - pytest
+  - flake8
