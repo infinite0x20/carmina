@@ -6,6 +6,19 @@ It includes:
 - A syllabification function that splits a Latin line into syllables.
 - A function to check whether a syllable is long or short based on
   Latin metrical rules.
+
+Update as of 13 June 2025:
+    The syllabify_word function does not properly divide the syllables
+    in cases where a single consonant is followed by a consonant cluster.
+
+    The is_long function needs to be reworked to consider the context of
+    the entire line rather than looking at each syllable individually.
+    Currently, it does not properly reflect the algorithmic process used
+    in manual scansion to determine syllable length.
+
+    As the hexameter_line and hexameter_text functions both depend on
+    these two functions working correctly, neither will produce the
+    correct output.
 """
 
 # Define Latin vowels and diphthongs
@@ -45,7 +58,6 @@ def syllabify_word(text):
                 current_syllable += text[i]
                 i += 1
         else:
-            # If it's a consonant, add it to the syllable
             current_syllable += text[i]
             i += 1
 
@@ -57,8 +69,9 @@ def syllabify_word(text):
             current_syllable = ""  # Reset the syllable container
 
     # If anything remains in current_syllable after the loop, append it
+    #   to the last syllable
     if current_syllable:
-        syllables.append(current_syllable)
+        syllables[-1] = syllables[-1] + current_syllable
 
     return syllables
 
@@ -79,7 +92,6 @@ def syllabify_line(line):
     syllabified_line = []
 
     for text in words:
-        # Syllabify each word and join syllables with dashes
         syllabified_line.extend(syllabify_word(text.lower()))
 
     return syllabified_line
@@ -94,14 +106,15 @@ def print_syllabified_line(syllabified_line):
 
     Outputs:
         (str): The syllabified line, with syllables
-               separated by a dash (-) and words by
-               a pipe (|)
+               separated by a dash (-)
     """
-    return " | ".join(syllabified_line)
+    return " - ".join(syllabified_line)
 
 
 def is_long(syllable):
     """
+    UNDER DEVELOPMENT
+
     Determines whether a given syllable is long according to Latin metrical
     rules.
 
@@ -141,6 +154,8 @@ def is_long(syllable):
 
 def hexameter_line(line):
     """
+    UNDER DEVELOPMENT
+
     Single-line hexameter parsing
 
     Assuming input is:
@@ -182,5 +197,13 @@ def hexameter_line(line):
 def hexameter_text(lines):
     """
     Multi-line hexameter parsing
+
+    Inputs:
+        lines (list[str]): A list of lines to be parsed
+                into hexameter
+
+    Outputs:
+        A list containing the metrical patterns for each
+        line in the input
     """
     return [hexameter_line(line) for line in lines]
