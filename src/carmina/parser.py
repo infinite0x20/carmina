@@ -53,7 +53,9 @@ def _normalize_line(line):
         line: str
     """
 
-    line = line.replace("<l>", "").replace("</l>", "").replace("\n", "")
+    line = line.replace("</l>", "").replace("\n", "")
+    start_index = line.index(">")
+    line = line[start_index + 1:]
     line = line.lower()  # converts to lowercase
     line = re.sub(r'[^\w\s]', '', line)  # removes punctuation
 
