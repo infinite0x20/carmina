@@ -6,12 +6,13 @@ from carmina.examples import EXAMPLE_PATH
 from carmina import parser
 
 expected_single_mixed = ["arma virumque cano troiae qui primus ab oris"]
-expected_multiline = ['arma virumque cano troiae qui primus ab oris',
- 'italiam fato profugus laviniaque venit litora',
- 'multum ille et terris iactatus et alto vi superum saevae memorem iunonis ob iram',
- 'multa quoque et bello passus dum conderet urbem',
- 'inferretque deos latio genus unde latinum',
- 'albanique patres atque altae moenia romae']
+expected_multiline = ["arma virumque cano troiae qui primus ab oris",
+                      "italiam fato profugus laviniaque venit",
+                      "litora multum ille et terris iactatus et alto",
+                      "vi superum saevae memorem iunonis ob iram",
+                      "multa quoque et bello passus dum conderet urbem",
+                      "inferretque deos latio genus unde latinum",
+                      "albanique patres atque altae moenia romae"]
 expected_mixed_elision = ["litora multum ille et terris iactatus et alto"]
 expected_single_m_elision = ["venturum excidio libyae sic volvere parcas"]
 expected_single_vowel_elision = ["turbine corripuit scopuloque infixit acuto"]
