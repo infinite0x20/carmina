@@ -37,7 +37,7 @@ def parse_xml(file_path):
     with open(file_path) as f:
         lines = f.readlines()
         normalized_lines = [_normalize_line(line) for line in lines
-                            if line.startswith("<l>")]
+                            if line.startswith("<l")]
         return normalized_lines
 
 
